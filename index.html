@@ -3,7 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michele Falcone — Data Analyst</title>
+<title>Michele Falcone — Data & Supply Chain Analyst Portfolio</title>
+<meta name="description" content="Michele Falcone — Data & Supply Chain Analyst. MSc Management Engineering. SQL, Tableau, Python. Proven results: +40% forecast accuracy, error rates reduced to <1%.">
+<meta name="author" content="Michele Falcone">
+<meta name="keywords" content="Data Analyst, Supply Chain Analyst, SQL, Tableau, Python, Portfolio, Michele Falcone">
+<meta name="theme-color" content="#0d0d1a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f1fa" media="(prefers-color-scheme: light)">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Michele Falcone — Data & Supply Chain Analyst">
+<meta property="og:description" content="Interactive portfolio. SQL, Tableau, Python. +40% forecast accuracy, error rates <1%, €10K saved. Explore the macOS-style desktop.">
+<meta property="og:url" content="https://michelefalcone.dev">
+<meta property="og:site_name" content="Michele Falcone Portfolio">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michele Falcone — Data & Supply Chain Analyst">
+<meta name="twitter:description" content="Interactive portfolio. SQL, Tableau, Python. +40% forecast accuracy, error rates <1%, €10K saved.">
+<!-- Favicon SVG -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%239b6dff'/%3E%3Cstop offset='100%25' stop-color='%236c3bcc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Inter,system-ui,sans-serif' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EMF%3C/text%3E%3C/svg%3E">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Michele Falcone",
+  "jobTitle": "Data & Supply Chain Analyst",
+  "url": "https://michelefalcone.dev",
+  "email": "falconemichele4316@gmail.com",
+  "telephone": "+393331456979",
+  "sameAs": [
+    "https://github.com/falco-m",
+    "https://www.linkedin.com/in/falconemichele00/"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Parma"
+  },
+  "knowsAbout": ["SQL", "Tableau", "Python", "Supply Chain Management", "Data Analysis", "Power BI"]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -980,6 +1018,224 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ─── SVG AVATAR ─────────────────────────────────────────────── */
+.about-avatar {
+  position: relative;
+  overflow: visible;
+}
+.about-avatar svg { display: block; }
+.avatar-pupil {
+  transition: transform 0.08s ease-out;
+}
+@keyframes avatar-blink {
+  0%, 95%, 100% { transform: scaleY(1); }
+  97% { transform: scaleY(0.05); }
+}
+.avatar-eye-group {
+  animation: avatar-blink 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* ─── ANALYTICS DASHBOARD ────────────────────────────────────── */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.dash-widget {
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex; flex-direction: column; gap: 8px;
+  transition: border-color var(--dur-fast) var(--ease-out),
+              box-shadow var(--dur-fast) var(--ease-out);
+}
+.dash-widget:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+.dash-widget-label {
+  font-size: .68rem; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.dash-widget-label .dash-icon {
+  font-size: .9rem;
+}
+.dash-widget-value {
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--accent-light);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.dash-widget-sub {
+  font-size: .72rem; color: var(--text-secondary);
+}
+.dash-bar-track {
+  width: 100%; height: 6px;
+  background: var(--border-default);
+  border-radius: 3px; overflow: hidden;
+}
+.dash-bar-fill {
+  height: 100%; border-radius: 3px; width: 0%;
+  transition: width 1.4s cubic-bezier(.22,1,.36,1);
+}
+.dash-bar-green { background: linear-gradient(90deg, oklch(55% .18 145), oklch(70% .2 145)); }
+.dash-bar-purple { background: linear-gradient(90deg, var(--accent-2), var(--accent-1)); }
+.dash-bar-orange { background: linear-gradient(90deg, oklch(60% .18 60), oklch(72% .2 80)); }
+.dash-bar-blue { background: linear-gradient(90deg, oklch(50% .16 240), oklch(65% .18 220)); }
+
+/* Donut chart */
+.dash-donut-wrap {
+  display: flex; align-items: center; gap: 14px;
+}
+.dash-donut {
+  width: 64px; height: 64px; flex-shrink: 0;
+}
+.dash-donut-bg { fill: none; stroke: var(--border-default); stroke-width: 6; }
+.dash-donut-fill {
+  fill: none; stroke-width: 6; stroke-linecap: round;
+  transition: stroke-dashoffset 1.4s cubic-bezier(.22,1,.36,1);
+}
+.dash-donut-text {
+  font-size: .72rem; color: var(--text-secondary);
+  display: flex; flex-direction: column; gap: 2px;
+}
+.dash-donut-text strong {
+  font-size: 1.1rem; color: var(--accent-light);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Sparkline */
+.dash-sparkline {
+  width: 100%; height: 32px;
+}
+.dash-sparkline-line {
+  fill: none; stroke: var(--accent-1); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.dash-sparkline-area {
+  fill: url(#sparkGrad); opacity: .3;
+}
+.dash-section-title {
+  font-size: .78rem; font-weight: 600; color: var(--text-primary);
+  padding: 8px 0 4px; grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 8px;
+}
+.dash-section-title::after {
+  content: ''; flex: 1; height: 1px; background: var(--border-subtle);
+}
+
+/* Light mode */
+[data-theme="light"] .dash-widget {
+  background: oklch(88% .014 280 / .8);
+}
+
+/* ─── iMESSAGE CONTACT ────────────────────────────────────────── */
+.imessage-wrap {
+  display: flex; flex-direction: column;
+  height: 100%;
+  background: var(--bg-deep);
+}
+.imessage-chat {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.imessage-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: .84rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: bubble-in .35s var(--ease-spring) forwards;
+}
+.imessage-bubble.sent {
+  align-self: flex-end;
+  background: oklch(55% .2 260);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+.imessage-bubble.received {
+  align-self: flex-start;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+}
+@keyframes bubble-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+.imessage-typing {
+  align-self: flex-start;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: 18px;
+  padding: 10px 16px;
+  display: flex; gap: 4px;
+  opacity: 0;
+  animation: bubble-in .25s var(--ease-spring) forwards;
+}
+.typing-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: .15s; }
+.typing-dot:nth-child(3) { animation-delay: .3s; }
+@keyframes typing-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: .4; }
+  30% { transform: translateY(-5px); opacity: 1; }
+}
+.imessage-input-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--surface-glass);
+}
+.imessage-input {
+  flex: 1;
+  background: var(--surface-card);
+  border: 1px solid var(--border-default);
+  border-radius: 20px;
+  padding: 8px 14px;
+  font-family: var(--font-sans);
+  font-size: .84rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.imessage-input:focus {
+  border-color: var(--border-accent);
+}
+.imessage-input::placeholder { color: var(--text-muted); }
+.imessage-send-btn {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: oklch(55% .2 260);
+  display: flex; align-items: center; justify-content: center;
+  transition: transform var(--dur-fast) var(--ease-spring), background var(--dur-fast);
+  flex-shrink: 0;
+}
+.imessage-send-btn:hover {
+  transform: scale(1.1);
+  background: oklch(60% .22 260);
+}
+.imessage-send-btn svg { width: 16px; height: 16px; }
+.imessage-timestamp {
+  text-align: center;
+  font-size: .68rem;
+  color: var(--text-muted);
+  padding: 4px 0;
+}
+
+/* Light mode */
+[data-theme="light"] .imessage-wrap { background: var(--bg-deep); }
+[data-theme="light"] .imessage-bubble.sent { background: oklch(50% .22 260); }
 </style>
 </head>
 <body>
@@ -1010,6 +1266,12 @@ html, body {
       <button class="topbar-icon-btn" id="spotlight-btn" title="Search (⌘K)" aria-label="Open Spotlight">
         <svg viewBox="0 0 20 20" fill="none" width="14" stroke="currentColor" stroke-width="2" stroke-linecap="round">
           <circle cx="9" cy="9" r="5.5"/><line x1="13.5" y1="13.5" x2="17" y2="17"/>
+        </svg>
+      </button>
+      <button class="topbar-icon-btn" id="sound-btn" title="Toggle sounds" aria-label="Toggle sound effects">
+        <svg viewBox="0 0 20 20" fill="currentColor" width="14">
+          <path id="sound-icon-on" d="M10 3L5 7H2v6h3l5 4V3zm4 2.5a5 5 0 0 1 0 9M12.5 7a3 3 0 0 1 0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path id="sound-icon-off" class="hidden" d="M10 3L5 7H2v6h3l5 4V3zm4 5l4 4m0-4l-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </button>
       <button class="topbar-icon-btn" id="theme-btn" title="Toggle theme" aria-label="Toggle dark/light mode">
@@ -1049,7 +1311,34 @@ html, body {
           <span class="app-window-title">About Me</span>
         </header>
         <div class="app-window-content">
-          <div class="about-avatar">MF</div>
+          <div class="about-avatar" id="avatar-wrap">
+            <svg viewBox="0 0 72 72" width="72" height="72" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="avatarGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="oklch(85% .12 290)"/>
+                  <stop offset="60%" stop-color="oklch(68% .16 290)"/>
+                  <stop offset="100%" stop-color="oklch(60% .18 270)"/>
+                </linearGradient>
+              </defs>
+              <!-- Face circle -->
+              <circle cx="36" cy="36" r="36" fill="url(#avatarGrad)"/>
+              <!-- Left eye -->
+              <g class="avatar-eye-group">
+                <ellipse cx="25" cy="30" rx="5.5" ry="6" fill="#fff" opacity=".95"/>
+                <circle class="avatar-pupil" id="pupil-l" cx="25" cy="30" r="2.8" fill="#1a0a35"/>
+              </g>
+              <!-- Right eye -->
+              <g class="avatar-eye-group">
+                <ellipse cx="47" cy="30" rx="5.5" ry="6" fill="#fff" opacity=".95"/>
+                <circle class="avatar-pupil" id="pupil-r" cx="47" cy="30" r="2.8" fill="#1a0a35"/>
+              </g>
+              <!-- Smile -->
+              <path id="avatar-smile" d="M26 44 Q36 52 46 44" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".85"/>
+              <!-- Subtle cheeks -->
+              <circle cx="18" cy="40" r="4" fill="oklch(70% .15 20)" opacity=".2"/>
+              <circle cx="54" cy="40" r="4" fill="oklch(70% .15 20)" opacity=".2"/>
+            </svg>
+          </div>
           <div class="about-name">Michele Falcone</div>
           <div class="about-title">Supply Chain Analyst · SQL · Tableau</div>
           <p class="about-bio">
@@ -1239,6 +1528,131 @@ html, body {
       </div>
     </div>
 
+    <!-- WINDOW: Analytics Dashboard -->
+    <div class="app-window-shell hidden" id="win-analytics" style="left:15%;top:8%;width:50%;height:70%">
+      <div class="app-window">
+        <div class="resize-zone n"></div><div class="resize-zone s"></div>
+        <div class="resize-zone e"></div><div class="resize-zone w"></div>
+        <div class="resize-zone ne"></div><div class="resize-zone nw"></div>
+        <div class="resize-zone se"></div><div class="resize-zone sw"></div>
+        <header class="app-window-header">
+          <div class="traffic-lights">
+            <button class="traffic-light traffic-light--close" data-win="win-analytics" title="Close"><span class="traffic-light-icon">✕</span></button>
+            <button class="traffic-light traffic-light--minimize" data-win="win-analytics" title="Minimize"><span class="traffic-light-icon">−</span></button>
+            <button class="traffic-light traffic-light--focus" data-win="win-analytics" title="Fullscreen"><span class="traffic-light-icon">+</span></button>
+          </div>
+          <span class="app-window-title">Analytics Dashboard</span>
+        </header>
+        <div class="app-window-content" id="analytics-content">
+          <div class="dash-section-title">Key Performance Indicators</div>
+          <div class="dashboard-grid">
+
+            <!-- Forecast Accuracy -->
+            <div class="dash-widget animate-in" id="dw-forecast">
+              <div class="dash-widget-label"><span class="dash-icon">📈</span> Forecast Accuracy</div>
+              <div class="dash-widget-value" data-count-to="40" data-prefix="+" data-suffix="%">+0%</div>
+              <div class="dash-bar-track"><div class="dash-bar-fill dash-bar-green" data-fill="85"></div></div>
+              <div class="dash-widget-sub">SKU risk-prioritization model at Lacertosus</div>
+            </div>
+
+            <!-- Error Rate -->
+            <div class="dash-widget animate-in" id="dw-error">
+              <div class="dash-widget-label"><span class="dash-icon">🎯</span> Error Rate Reduction</div>
+              <div class="dash-donut-wrap">
+                <svg class="dash-donut" viewBox="0 0 36 36">
+                  <circle class="dash-donut-bg" cx="18" cy="18" r="15"/>
+                  <circle class="dash-donut-fill" cx="18" cy="18" r="15"
+                    stroke="oklch(72% .2 145)" stroke-dasharray="94.25" stroke-dashoffset="94.25"
+                    data-target="93.3" transform="rotate(-90 18 18)"/>
+                </svg>
+                <div class="dash-donut-text">
+                  <span>8% → <strong data-count-to="1" data-prefix="<" data-suffix="%">&lt;0%</strong></span>
+                  <span style="font-size:.66rem;color:var(--text-muted)">on 15,000 shipments/year</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cost Savings -->
+            <div class="dash-widget animate-in" id="dw-savings">
+              <div class="dash-widget-label"><span class="dash-icon">💰</span> Cost Savings</div>
+              <div class="dash-widget-value" data-count-to="10" data-prefix="€" data-suffix="K">€0K</div>
+              <div class="dash-bar-track"><div class="dash-bar-fill dash-bar-orange" data-fill="70"></div></div>
+              <div class="dash-widget-sub">Per semester in reverse logistics costs</div>
+            </div>
+
+            <!-- OTIF -->
+            <div class="dash-widget animate-in" id="dw-otif">
+              <div class="dash-widget-label"><span class="dash-icon">📦</span> OTIF Performance</div>
+              <div class="dash-widget-value" data-count-to="99" data-suffix="%">0%</div>
+              <div class="dash-bar-track"><div class="dash-bar-fill dash-bar-purple" data-fill="99"></div></div>
+              <div class="dash-widget-sub">50–100 orders monitored daily</div>
+            </div>
+
+            <div class="dash-section-title">Scale & Volume</div>
+
+            <!-- SKUs -->
+            <div class="dash-widget animate-in" id="dw-skus">
+              <div class="dash-widget-label"><span class="dash-icon">📊</span> SKUs Managed</div>
+              <div class="dash-widget-value" data-count-to="1000" data-prefix="" data-suffix="+">0+</div>
+              <div class="dash-bar-track"><div class="dash-bar-fill dash-bar-blue" data-fill="80"></div></div>
+              <div class="dash-widget-sub">Across 10 warehouses, segmented by risk</div>
+            </div>
+
+            <!-- Records -->
+            <div class="dash-widget animate-in" id="dw-records">
+              <div class="dash-widget-label"><span class="dash-icon">🗄️</span> Records Analyzed</div>
+              <div class="dash-widget-value" data-count-to="500" data-prefix="" data-suffix="K+">0K+</div>
+              <div class="dash-sparkline-wrap">
+                <svg class="dash-sparkline" viewBox="0 0 200 32" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="sparkGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--accent-1)" stop-opacity=".4"/>
+                      <stop offset="100%" stop-color="var(--accent-1)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path class="dash-sparkline-area" d="M0,28 L20,24 40,26 60,18 80,20 100,12 120,14 140,8 160,10 180,4 200,2 200,32 0,32 Z"/>
+                  <polyline class="dash-sparkline-line" points="0,28 20,24 40,26 60,18 80,20 100,12 120,14 140,8 160,10 180,4 200,2"/>
+                </svg>
+              </div>
+              <div class="dash-widget-sub">E-commerce transactions via SQL & Tableau</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WINDOW: Contact (iMessage) -->
+    <div class="app-window-shell hidden" id="win-contact" style="left:25%;top:12%;width:40%;height:60%">
+      <div class="app-window">
+        <div class="resize-zone n"></div><div class="resize-zone s"></div>
+        <div class="resize-zone e"></div><div class="resize-zone w"></div>
+        <div class="resize-zone ne"></div><div class="resize-zone nw"></div>
+        <div class="resize-zone se"></div><div class="resize-zone sw"></div>
+        <header class="app-window-header">
+          <div class="traffic-lights">
+            <button class="traffic-light traffic-light--close" data-win="win-contact" title="Close"><span class="traffic-light-icon">✕</span></button>
+            <button class="traffic-light traffic-light--minimize" data-win="win-contact" title="Minimize"><span class="traffic-light-icon">−</span></button>
+            <button class="traffic-light traffic-light--focus" data-win="win-contact" title="Fullscreen"><span class="traffic-light-icon">+</span></button>
+          </div>
+          <span class="app-window-title">Messages — Michele Falcone</span>
+        </header>
+        <div class="app-window-content" style="padding:0;display:flex;flex-direction:column">
+          <div class="imessage-wrap">
+            <div class="imessage-chat" id="imessage-chat">
+              <div class="imessage-timestamp">Today</div>
+            </div>
+            <div class="imessage-input-bar">
+              <input class="imessage-input" id="imessage-input" type="text" placeholder="Type a message…" autocomplete="off" spellcheck="false">
+              <button class="imessage-send-btn" id="imessage-send" title="Send message">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- WINDOW: Terminal -->
     <div class="app-window-shell hidden" id="win-terminal" style="left:20%;top:15%;width:44%;height:54%">
       <div class="app-window">
@@ -1323,6 +1737,24 @@ Type <span style="color:var(--accent-light)">'help'</span> for a list of command
         <div class="dock-dot" id="dot-resume"></div>
       </div>
 
+      <!-- Analytics -->
+      <div class="dock-item dock-win-launcher" data-target="win-analytics">
+        <div class="dock-icon" style="background:linear-gradient(135deg,oklch(50% .18 160),oklch(42% .2 140))">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="dock-tooltip">Analytics</div>
+        <div class="dock-dot" id="dot-analytics"></div>
+      </div>
+
+      <!-- Contact -->
+      <div class="dock-item dock-win-launcher" data-target="win-contact">
+        <div class="dock-icon" style="background:linear-gradient(135deg,#34c759,#28a745)">
+          <svg viewBox="0 0 24 24" fill="#fff" width="26"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.2L4 17.2V4h16v12z" fill="#fff"/></svg>
+        </div>
+        <div class="dock-tooltip">Contact</div>
+        <div class="dock-dot" id="dot-contact"></div>
+      </div>
+
       <!-- Terminal -->
       <div class="dock-item dock-win-launcher" data-target="win-terminal">
         <div class="dock-icon" style="background:#1c1c1e">
@@ -1382,6 +1814,7 @@ Type <span style="color:var(--accent-light)">'help'</span> for a list of command
     if (i >= steps.length) {
       setTimeout(() => {
         screen.classList.add('hidden');
+        sound.play('bootChime');
         screen.addEventListener('transitionend', () => screen.remove(), { once: true });
         initApp();
       }, 200);
@@ -1464,6 +1897,7 @@ function initTheme() {
   const saved = localStorage.getItem('portfolio-theme') || 'dark';
   applyTheme(saved);
   btn.addEventListener('click', () => {
+    sound.play('switch');
     const current = document.documentElement.dataset.theme;
     applyTheme(current === 'dark' ? 'light' : 'dark');
   });
@@ -1521,6 +1955,7 @@ function focusWindow(shell) {
 function openWindow(id) {
   const shell = document.getElementById(id);
   if (!shell) return;
+  sound.play('pop');
   shell.classList.remove('hidden');
   const win = shell.querySelector('.app-window');
   win.classList.remove('closing', 'minimizing');
@@ -1535,6 +1970,7 @@ function openWindow(id) {
 function closeWindow(id) {
   const shell = document.getElementById(id);
   if (!shell) return;
+  sound.play('woosh');
   const win = shell.querySelector('.app-window');
   win.classList.add('closing');
   win.addEventListener('animationend', () => {
@@ -1549,6 +1985,7 @@ function closeWindow(id) {
 function minimizeWindow(id) {
   const shell = document.getElementById(id);
   if (!shell) return;
+  sound.play('swoosh');
   const win = shell.querySelector('.app-window');
   win.classList.add('minimizing');
   win.addEventListener('animationend', () => {
@@ -1590,7 +2027,9 @@ function updateDot(id) {
     'win-about': 'dot-about',
     'win-projects': 'dot-projects',
     'win-resume': 'dot-resume',
-    'win-terminal': 'dot-terminal'
+    'win-terminal': 'dot-terminal',
+    'win-analytics': 'dot-analytics',
+    'win-contact': 'dot-contact'
   };
   const dotId = dotMap[id];
   if (!dotId) return;
@@ -1694,6 +2133,7 @@ function initDock() {
   // Window launchers
   document.querySelectorAll('.dock-win-launcher').forEach(item => {
     item.addEventListener('click', () => {
+      sound.play('click');
       const target = item.dataset.target;
       if (winStates[target] === 'open') { focusWindow(document.getElementById(target)); }
       else { openWindow(target); }
@@ -1735,6 +2175,8 @@ const spotlightData = [
   { icon: '👤', title: 'About Me', sub: 'Supply Chain Analyst · SQL · Tableau', win: 'win-about' },
   { icon: '📁', title: 'Projects', sub: 'Market Basket Analysis, AI Job Hunting', win: 'win-projects' },
   { icon: '📄', title: 'Resume', sub: 'Lacertosus, Dale Consulting — MSc Engineering', win: 'win-resume' },
+  { icon: '📊', title: 'Analytics', sub: 'KPI Dashboard — Forecast, Error Rate, OTIF', win: 'win-analytics' },
+  { icon: '💬', title: 'Contact', sub: 'Send me a message — iMessage style', win: 'win-contact' },
   { icon: '💻', title: 'Terminal', sub: 'Interactive portfolio terminal', win: 'win-terminal' },
   { icon: '🛒', title: 'Market Basket Analysis', sub: 'SQL, Tableau — 500k+ e-commerce records', win: 'win-projects' },
   { icon: '🤖', title: 'AI Job Hunting', sub: 'n8n, Apify, OpenAI API automation', win: 'win-projects' },
@@ -1749,6 +2191,7 @@ function initSpotlight() {
   const results = document.getElementById('spotlight-results');
 
   function open() {
+    sound.play('ding');
     overlay.classList.add('open');
     setTimeout(() => input.focus(), 50);
     render('');
@@ -1804,6 +2247,7 @@ function initSpotlight() {
    TOAST
 ═══════════════════════════════════════════════════════════════ */
 function showToast(icon, title, msg, duration = 4000) {
+  sound.play('ping');
   const container = document.getElementById('toast-container');
   const toast = document.createElement('div');
   toast.className = 'toast';
@@ -1863,7 +2307,7 @@ function initContextMenu() {
   });
 
   document.getElementById('ctx-open-all').addEventListener('click', () => {
-    ['win-about', 'win-projects', 'win-resume'].forEach(id => {
+    ['win-about', 'win-projects', 'win-resume', 'win-analytics', 'win-contact'].forEach(id => {
       if (winStates[id] !== 'open') openWindow(id);
     });
   });
@@ -1886,7 +2330,7 @@ function initTerminal() {
   cat resume   — View work experience
   skills       — View technical skills
   contact      — Get in touch
-  open &lt;window&gt; — Open: about | projects | resume
+  open &lt;window&gt; — Open: about | projects | resume | analytics | contact
   clear        — Clear terminal
   help         — Show this message`,
 
@@ -1928,15 +2372,18 @@ Lean Six Sigma Yellow Belt — Atlantic Technological University (Dec 2023)`,
 
     clear: () => { output.innerHTML = ''; return null; },
 
-    'open about':    () => { openWindow('win-about'); return '<span class="success">Opening About Me…</span>'; },
-    'open projects': () => { openWindow('win-projects'); return '<span class="success">Opening Projects…</span>'; },
-    'open resume':   () => { openWindow('win-resume'); return '<span class="success">Opening Resume…</span>'; },
+    'open about':     () => { openWindow('win-about'); return '<span class="success">Opening About Me…</span>'; },
+    'open projects':  () => { openWindow('win-projects'); return '<span class="success">Opening Projects…</span>'; },
+    'open resume':    () => { openWindow('win-resume'); return '<span class="success">Opening Resume…</span>'; },
+    'open analytics': () => { openWindow('win-analytics'); return '<span class="success">Opening Analytics Dashboard…</span>'; },
+    'open contact':   () => { openWindow('win-contact'); return '<span class="success">Opening Contact…</span>'; },
   };
 
   input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
       const cmd = input.value.trim();
       if (!cmd) return;
+      sound.play('beep');
       history.unshift(cmd); histIdx = -1;
       appendLine(`<span class="terminal-prompt">michele@portfolio:~$</span> <span class="terminal-cmd">${escHtml(cmd)}</span>`);
       const fn = commands[cmd.toLowerCase()];
@@ -2096,6 +2543,7 @@ function typewriterBio() {
 function initCopyEmail() {
   document.getElementById('copy-email-btn')?.addEventListener('click', () => {
     navigator.clipboard.writeText('falconemichele4316@gmail.com').then(() => {
+      sound.play('tick');
       showToast('📋', 'Email copied!', 'falconemichele4316@gmail.com is in your clipboard.');
     }).catch(() => {
       showToast('⚠️', 'Copy failed', 'Please copy manually: falconemichele4316@gmail.com');
@@ -2186,6 +2634,432 @@ function initCursor() {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   SOUND ENGINE — Web Audio API Synthesized Sounds
+═══════════════════════════════════════════════════════════════ */
+const sound = {
+  _ctx: null,
+  _muted: false,
+
+  _ensureCtx() {
+    if (!this._ctx) {
+      this._ctx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (this._ctx.state === 'suspended') this._ctx.resume();
+    return this._ctx;
+  },
+
+  isMuted() { return this._muted; },
+
+  setMute(m) {
+    this._muted = m;
+    localStorage.setItem('portfolio-sound-muted', m ? '1' : '0');
+    const onIcon = document.getElementById('sound-icon-on');
+    const offIcon = document.getElementById('sound-icon-off');
+    if (onIcon) onIcon.classList.toggle('hidden', m);
+    if (offIcon) offIcon.classList.toggle('hidden', !m);
+  },
+
+  play(name) {
+    if (this._muted) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    try {
+      const fn = this['_' + name];
+      if (fn) fn.call(this);
+    } catch(e) { /* silent fail */ }
+  },
+
+  // ── Boot Chime: C-E-G chord ──
+  _bootChime() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const master = ctx.createGain();
+    master.gain.setValueAtTime(0, t);
+    master.gain.linearRampToValueAtTime(0.12, t + 0.08);
+    master.gain.linearRampToValueAtTime(0.08, t + 0.4);
+    master.gain.linearRampToValueAtTime(0, t + 0.9);
+    master.connect(ctx.destination);
+
+    [261.63, 329.63, 392.00].forEach(freq => {
+      const osc = ctx.createOscillator();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      osc.connect(master);
+      osc.start(t);
+      osc.stop(t + 0.9);
+    });
+  },
+
+  // ── Pop: window open ──
+  _pop() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(300, t);
+    osc.frequency.exponentialRampToValueAtTime(520, t + 0.07);
+    gain.gain.setValueAtTime(0.1, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.1);
+  },
+
+  // ── Woosh: window close ──
+  _woosh() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(420, t);
+    osc.frequency.exponentialRampToValueAtTime(180, t + 0.12);
+    gain.gain.setValueAtTime(0.08, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.13);
+  },
+
+  // ── Swoosh: window minimize ──
+  _swoosh() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'lowpass';
+    filter.frequency.setValueAtTime(2000, t);
+    filter.frequency.exponentialRampToValueAtTime(200, t + 0.15);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(500, t);
+    osc.frequency.exponentialRampToValueAtTime(150, t + 0.15);
+    gain.gain.setValueAtTime(0.08, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.15);
+    osc.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.16);
+  },
+
+  // ── Click: dock click ──
+  _click() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const bufferSize = ctx.sampleRate * 0.04;
+    const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1) * 0.3;
+    const noise = ctx.createBufferSource();
+    noise.buffer = buffer;
+    const filter = ctx.createBiquadFilter();
+    filter.type = 'bandpass';
+    filter.frequency.value = 800;
+    filter.Q.value = 2;
+    const gain = ctx.createGain();
+    gain.gain.setValueAtTime(0.12, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
+    noise.connect(filter);
+    filter.connect(gain);
+    gain.connect(ctx.destination);
+    noise.start(t);
+    noise.stop(t + 0.04);
+  },
+
+  // ── Ding: spotlight open ──
+  _ding() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = 880;
+    gain.gain.setValueAtTime(0.1, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.2);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.2);
+  },
+
+  // ── Ping: toast notification ──
+  _ping() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    [1047, 1319].forEach(freq => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.06, t);
+      gain.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.12);
+    });
+  },
+
+  // ── Message Send swoosh ──
+  _msgSend() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(400, t);
+    osc.frequency.exponentialRampToValueAtTime(800, t + 0.1);
+    gain.gain.setValueAtTime(0.07, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.11);
+  },
+
+  // ── Bubble: message received ──
+  _bubble() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(580, t);
+    osc.frequency.exponentialRampToValueAtTime(720, t + 0.06);
+    gain.gain.setValueAtTime(0.08, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.07);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.07);
+  },
+
+  // ── Switch: theme toggle ──
+  _switch() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'square';
+    osc.frequency.value = 200;
+    gain.gain.setValueAtTime(0.04, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.03);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.03);
+  },
+
+  // ── Tick: copy/confirm ──
+  _tick() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = 1200;
+    gain.gain.setValueAtTime(0.07, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.05);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.05);
+  },
+
+  // ── Beep: terminal enter ──
+  _beep() {
+    const ctx = this._ensureCtx();
+    const t = ctx.currentTime;
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = 'square';
+    osc.frequency.value = 440;
+    gain.gain.setValueAtTime(0.03, t);
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.04);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.04);
+  }
+};
+
+function initSounds() {
+  const saved = localStorage.getItem('portfolio-sound-muted');
+  sound.setMute(saved === '1');
+  document.getElementById('sound-btn')?.addEventListener('click', () => {
+    sound.setMute(!sound.isMuted());
+    sound.play('tick');
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SVG AVATAR — EYES FOLLOW CURSOR
+═══════════════════════════════════════════════════════════════ */
+function initAvatar() {
+  const wrap = document.getElementById('avatar-wrap');
+  if (!wrap) return;
+  const pupilL = document.getElementById('pupil-l');
+  const pupilR = document.getElementById('pupil-r');
+  const smile = document.getElementById('avatar-smile');
+  if (!pupilL || !pupilR) return;
+
+  const MAX_OFFSET = 3;
+
+  document.addEventListener('mousemove', e => {
+    const rect = wrap.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dx = e.clientX - cx;
+    const dy = e.clientY - cy;
+    const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+    const ox = (dx / dist) * Math.min(MAX_OFFSET, dist * 0.02);
+    const oy = (dy / dist) * Math.min(MAX_OFFSET, dist * 0.02);
+
+    pupilL.setAttribute('cx', 25 + ox);
+    pupilL.setAttribute('cy', 30 + oy);
+    pupilR.setAttribute('cx', 47 + ox);
+    pupilR.setAttribute('cy', 30 + oy);
+  });
+
+  // Hover → bigger smile
+  wrap.addEventListener('mouseenter', () => {
+    smile.setAttribute('d', 'M24 43 Q36 55 48 43');
+  });
+  wrap.addEventListener('mouseleave', () => {
+    smile.setAttribute('d', 'M26 44 Q36 52 46 44');
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANALYTICS DASHBOARD — ANIMATED CHARTS
+═══════════════════════════════════════════════════════════════ */
+function animateDashboard() {
+  const container = document.getElementById('analytics-content');
+  if (!container || container.dataset.animated) return;
+  container.dataset.animated = '1';
+
+  // Animate counter values
+  container.querySelectorAll('[data-count-to]').forEach((el, idx) => {
+    const target = parseFloat(el.dataset.countTo);
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const duration = 1400;
+
+    setTimeout(() => {
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        const val = Math.round(target * ease);
+        el.textContent = prefix + val + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }, idx * 180);
+  });
+
+  // Animate bar fills
+  container.querySelectorAll('[data-fill]').forEach((bar, idx) => {
+    const target = bar.dataset.fill;
+    setTimeout(() => {
+      bar.style.width = target + '%';
+    }, 300 + idx * 180);
+  });
+
+  // Animate donut
+  container.querySelectorAll('.dash-donut-fill').forEach((circle, idx) => {
+    const target = parseFloat(circle.dataset.target);
+    const circumference = 94.25;
+    setTimeout(() => {
+      circle.style.strokeDashoffset = circumference - (circumference * target / 100);
+    }, 400 + idx * 200);
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   iMESSAGE CONTACT
+═══════════════════════════════════════════════════════════════ */
+function initContact() {
+  const chat = document.getElementById('imessage-chat');
+  const input = document.getElementById('imessage-input');
+  const sendBtn = document.getElementById('imessage-send');
+  if (!chat || !input) return;
+
+  const introMessages = [
+    "Hey there! 👋",
+    "I'm Michele — a Data & Supply Chain Analyst based in Italy.",
+    "I'm currently looking for new opportunities where I can turn data into real business impact.",
+    "Feel free to write me a message below — I'd love to connect!"
+  ];
+
+  let introPlayed = false;
+
+  function playIntro() {
+    if (introPlayed) return;
+    introPlayed = true;
+    let delay = 400;
+
+    introMessages.forEach((msg, i) => {
+      // Show typing indicator
+      setTimeout(() => {
+        const typing = document.createElement('div');
+        typing.className = 'imessage-typing';
+        typing.innerHTML = '<span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>';
+        chat.appendChild(typing);
+        chat.scrollTop = chat.scrollHeight;
+
+        // Replace with bubble after delay
+        setTimeout(() => {
+          typing.remove();
+          sound.play('bubble');
+          const bubble = document.createElement('div');
+          bubble.className = 'imessage-bubble sent';
+          bubble.style.animationDelay = '0s';
+          bubble.textContent = msg;
+          chat.appendChild(bubble);
+          chat.scrollTop = chat.scrollHeight;
+        }, 800 + msg.length * 12);
+      }, delay);
+
+      delay += 1200 + msg.length * 12;
+    });
+  }
+
+  function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Show user bubble
+    sound.play('msgSend');
+    const bubble = document.createElement('div');
+    bubble.className = 'imessage-bubble received';
+    bubble.textContent = text;
+    chat.appendChild(bubble);
+    chat.scrollTop = chat.scrollHeight;
+    input.value = '';
+
+    // Open mailto after short delay
+    setTimeout(() => {
+      const subject = encodeURIComponent('Hi Michele — from your portfolio!');
+      const body = encodeURIComponent(text);
+      window.location.href = `mailto:falconemichele4316@gmail.com?subject=${subject}&body=${body}`;
+      showToast('✉️', 'Opening email client…', 'Your message will be sent via email.');
+    }, 600);
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', e => {
+    if (e.key === 'Enter') sendMessage();
+  });
+
+  // Return playIntro so it can be triggered when window opens
+  chat._playIntro = playIntro;
+}
+
+/* ═══════════════════════════════════════════════════════════════
    HOOK NEW FEATURES INTO WINDOW OPEN
 ═══════════════════════════════════════════════════════════════ */
 const _origOpen = openWindow;
@@ -2193,6 +3067,11 @@ openWindow = function(id) {
   _origOpen(id);
   if (id === 'win-resume') setTimeout(animateKPIs, 300);
   if (id === 'win-about')  setTimeout(typewriterBio, 150);
+  if (id === 'win-analytics') setTimeout(animateDashboard, 300);
+  if (id === 'win-contact') {
+    const chat = document.getElementById('imessage-chat');
+    if (chat && chat._playIntro) setTimeout(chat._playIntro, 300);
+  }
 };
 
 function initApp() {
@@ -2208,6 +3087,9 @@ function initApp() {
   initCopyEmail();
   initScrollAnimations();
   initCursor();
+  initAvatar();
+  initContact();
+  initSounds();
 
   // Trigger for windows already open on load
   setTimeout(() => {
