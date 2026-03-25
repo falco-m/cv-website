@@ -1356,10 +1356,6 @@ html, body {
               <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               Email
             </a>
-            <button class="about-link" id="copy-email-btn" title="Copy email to clipboard">
-              <svg viewBox="0 0 24 24" width="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              Copy Email
-            </button>
           </div>
 
           <div class="section-label">Skills</div>
@@ -2535,19 +2531,6 @@ function typewriterBio() {
   next();
 }
 
-/* ═══════════════════════════════════════════════════════════════
-   COPY EMAIL
-═══════════════════════════════════════════════════════════════ */
-function initCopyEmail() {
-  document.getElementById('copy-email-btn')?.addEventListener('click', () => {
-    navigator.clipboard.writeText('falconemichele4316@gmail.com').then(() => {
-      sound.play('tick');
-      showToast('📋', 'Email copied!', 'falconemichele4316@gmail.com is in your clipboard.');
-    }).catch(() => {
-      showToast('⚠️', 'Copy failed', 'Please copy manually: falconemichele4316@gmail.com');
-    });
-  });
-}
 
 /* ═══════════════════════════════════════════════════════════════
    SCROLL-TRIGGERED ENTRANCE ANIMATIONS
@@ -3082,7 +3065,6 @@ function initApp() {
   initSpotlight();
   initContextMenu();
   initTerminal();
-  initCopyEmail();
   initScrollAnimations();
   initCursor();
   initAvatar();
